@@ -1,0 +1,66 @@
+body {
+    margin: 0;
+}
+
+.submitButton {
+    color: white;
+    border: none;
+    background-color: blue;
+    text-align: center;
+    overflow: hidden;
+    height: 30px;
+}
+
+input {
+    border: 1px solid #f1f1f1;
+    padding: 0 15px;
+    maxHeight: 70vh;
+    overflow: scroll;
+    margin:10px;
+    display:flex;
+    flexFlow:row wrap;
+    justifyContent: space-between;
+}
+
+.LoginBox {
+    border: 1px solid gray;
+    text-align: center;
+    height:30%;
+    width:30%;
+    margin: auto;
+    padding: 20px;
+    /*background-color: blue;*/
+}
+
+.mainLanding {
+    /*text-align: center;*/
+    background-color: black;
+    height: 70vh;
+}
+
+.text {
+    color: white !important;
+}
+
+.customNav {
+    background-color: transparent;
+}
+
+.howItWorks{
+    height: 60vh;
+
+}
+
+Button {
+    float: right;
+}
+
+.searchMain {
+    width: 80%;
+    display: inline;
+}
+
+.searchButton{
+    display:inline;
+
+}

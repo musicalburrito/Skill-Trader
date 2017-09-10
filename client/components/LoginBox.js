@@ -5,7 +5,7 @@ import React from 'react';
 import axios from 'axios';
 import style from '../style.js';
 
-class UsernameBox extends React.Component {
+class LoginBox extends React.Component {
     constructor(props) {
         super(props);
         this.state = { username: '' };
@@ -29,14 +29,16 @@ class UsernameBox extends React.Component {
         <form onSubmit= { this.handleSubmit }>
             <label>
                 Username:
-                <input type="text"
-                       value = { this.state.username }
-                       onChange = { this.handleUNChange }
-                       style= { style.forms }/>
+                <input
+                    className="forms"
+                    type="text"
+                    value = { this.state.username }
+                    onChange = { this.handleUNChange } />
             </label>
-                <input type="submit"
-                       value = "Submit"
-                       style = { style.forms }/>
+                <input
+                    className="submitButton"
+                    type="submit"
+                    value = "Submit" />
         </form>
     )}
 }
