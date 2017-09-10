@@ -3,7 +3,7 @@
  */
 import React from 'react';
 import axios from 'axios';
-import style from '../style';
+import '../styles.css';
 
 class ListingForm extends React.Component {
     constructor(props){
@@ -43,30 +43,32 @@ class ListingForm extends React.Component {
     }
     render(){
         return(
+
             <form onSubmit={ this.handleSubmit }>
                 <input
+                    className="forms"
                     type = 'text'
                     placeholder = 'title'
                     value = { this.state.title }
-                    onChange= { this.handleTitleChange }
-                    style= { style.forms }
-                />
+                    onChange= { this.handleTitleChange } />
                 <input
+                    className="forms"
                     type = 'text'
                     placeholder = 'username'
                     value = { this.state.username }
-                    onChange= { this.handleUsernameChange }
-                    style= { style.forms }/>
+                    onChange= { this.handleUsernameChange } />
                 <input
+                    className="forms"
                     type = 'text'
                     placeholder = 'description'
                     value = { this.state.description }
-                    onChange = { this.handleDescriptionChange }
-                    style= { style.forms }/>
-                <span className="forms">
+                    onChange = { this.handleDescriptionChange } />
+                <span>
                     <span>
-                        <input type="submit"
-                               value = "Submit"/>
+                        <input
+                            className="submitButton"
+                            type="submit"
+                            value = "Submit"/>
                     </span>
                 </span>
             </form>
