@@ -1,26 +1,9 @@
-/**
- * Created by nancyli on 8/16/17.
- */
-'use strict';
-
-var express = require('express');
-var mongoose = require('mongoose');
-var bodyParser = require('body-parser');
-var url = 'mongodb://localhost:27017/test2';
-var Username = require('./server/models/item');
-var Lsting = require('./server/models/listing');
-
-var app = express();
-var router = express.Router();
-var port = 3000;
-
-mongoose.connect(url , {
-    useMongoClient: true
-});
-
-app.use(bodyParser.json());
-app.use(bodyParser.urlencoded({ extended: true }));
-app.use('/api', router);
+var router = require('express').Router();
+var React = require('react');
+var ReactDOMServer = require('react-dom/server');
+var Username = require('../models/item');
+var Lsting = require('../models/listing');
+// var Component = require('../Component.jsx');
 
 router.use(function(req, res, next) {
     res.setHeader('Access-Control-Allow-Origin', 'http://localhost:8080');
@@ -33,7 +16,6 @@ router.use(function(req, res, next) {
     next();
 });
 
-
 router.get('/', function(req, res) {
     res.json({ message: 'API Initialized!'});
 });
@@ -43,11 +25,11 @@ router.route('/un')
         var un = new Username();
         un.username = req.body.username;
         un.save(function (err) {
-        if (err)
-            res.send(err);
-        res.json({message: 'db has been updated'});
-    })
-});
+            if (err)
+                res.send(err);
+            res.json({message: 'db has been updated'});
+        })
+    });
 
 router.route('/listings')
     .post(function(req, res){
@@ -62,8 +44,4 @@ router.route('/listings')
         })
     });
 
-
-
-app.listen(port, function() {
-    console.log('api running on port ${port}');
-});
+module.exports = router;
