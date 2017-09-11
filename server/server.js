@@ -18,7 +18,7 @@ mongoose.connect(url , {
 
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
-// app.use('/api', router);
+app.use('/api', router);
 // app.use(cors());
 
 // router.use(function(req, res, next) {
@@ -31,8 +31,9 @@ app.use(bodyParser.urlencoded({ extended: true }));
 //     res.setHeader('Cache-Control', 'no-cache');
 //     next();
 // });
+// require('./routes/moreroutes')(app);
+app.use(require('./routes/routes'));
 
-app.use(require('./routes/routes.js'));
 
 // router.get('/', function(req, res) {
 //     res.json({ message: 'API Initialized!'});

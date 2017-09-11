@@ -3,6 +3,7 @@ import LoginBox from './LoginBox';
 import ListingForm from './ListingForm';
 import Home from './Home';
 import Header from './Header';
+import LoginPage from './LoginPage'
 import '../styles.css';
 
 export default class App extends Component {
@@ -12,7 +13,7 @@ export default class App extends Component {
             <Header/>
             {this.props.children};
             {/*<Home/>*/}
-            {/*<LoginBox url='http://localhost:3000/api/un'/>*/}
+            {/*<LoginBox url='http://localhost:3000/un'/>*/}
             {/*<ListingForm url='http://localhost:3000/api/listings' />*/}
         </div>);
     }
