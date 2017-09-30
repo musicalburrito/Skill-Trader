@@ -18,15 +18,12 @@ class LoginBox extends React.Component {
     }
     handleUNChange(e) {
         this.setState({ username: e.target.value });
-        alert('updated: ' + this.state.username);
     }
     handlePassChange(e) {
         this.setState({ password: e.target.value });
-        alert('updated: ' + this.state.password);
     }
     handleSubmit(e){
         e.preventDefault();
-        alert('A name was submitted: ' + this.state.username);
         axios.post(this.props.url, {
             username: this.state.username,
             password: this.state.password })
@@ -56,6 +53,5 @@ class LoginBox extends React.Component {
             </div>
     )}
 }
-
 
 export default LoginBox;

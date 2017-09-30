@@ -5,6 +5,8 @@ import App from './components/App';
 import Home from './components/Home';
 import LoginBox from './components/LoginBox';
 import LoginPage from './components/LoginPage';
+import ListingForm from './components/ListingForm';
+import ListingPage from './components/ListingPage';
 
 ReactDOM.render(
     <Router history = { history }>
@@ -12,5 +14,6 @@ ReactDOM.render(
             <IndexRoute component={Home}/>
         </Route>
         <Route path = "/login" component={LoginPage}/>
+        <Router path = "/listings" component={ListingPage}/>
     </Router>,
     document.getElementById('root'));

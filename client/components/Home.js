@@ -3,8 +3,6 @@
  */
 import React from 'react';
 import {Jumbotron} from 'react-bootstrap';
-import {FormGroup, InputGroup, FormControl, DropdownButton, MenuItem} from 'react-bootstrap';
-import {Button, ButtonToolbar} from 'react-bootstrap';
 
 
 class Home extends React.Component {

@@ -1,9 +1,12 @@
 /**
+ * Created by nancyli on 9/16/17.
+ */
+/**
  * Created by nancyli on 9/10/17.
  */
 import React from 'react';
 import {LinkContainer} from 'react-router-bootstrap';
-import LoginBox from './LoginBox';
+import LoginBox from './ListingForm';
 import Header from './Header';
 
 class LoginPage extends React.Component {
@@ -16,7 +19,7 @@ class LoginPage extends React.Component {
         return(
             <div>
                 <Header/>
-                <LoginBox url='http://localhost:3000/un'/>
+                <LoginBox url='http://localhost:3000/listings'/>
             </div>
         )
     }

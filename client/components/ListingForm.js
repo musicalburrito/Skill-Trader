@@ -32,18 +32,17 @@ class ListingForm extends React.Component {
     }
     handleSubmit(e){
         e.preventDefault();
-        this.setState({ title: '', username: '', description: '' });
+        // this.setState({ title: '', username: '', description: '' });
         axios.post(this.props.url, { title: this.state.title,
             username: this.state.username,
             description: this.state.description })
             .catch(err => {
                 console.log(err);
-            })
-        alert()
+            });
+        alert();
     }
     render(){
         return(
-
             <form onSubmit={ this.handleSubmit }>
                 <input
                     className="forms"
