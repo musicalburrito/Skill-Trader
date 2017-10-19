@@ -3,10 +3,9 @@ import ReactDOM from 'react-dom';
 import { Router, Route, IndexRoute, browserHistory as history } from 'react-router';
 import App from './components/App';
 import Home from './components/Home';
-import LoginBox from './components/LoginBox';
 import LoginPage from './components/LoginPage';
-import ListingForm from './components/ListingForm';
 import ListingPage from './components/ListingPage';
+import BrowsePage from './components/BrowsePage';
 
 ReactDOM.render(
     <Router history = { history }>
@@ -15,5 +14,6 @@ ReactDOM.render(
         </Route>
         <Route path = "/login" component={LoginPage}/>
         <Router path = "/listings" component={ListingPage}/>
+        <Router path = "/viewListings" component={BrowsePage}/>
     </Router>,
     document.getElementById('root'));

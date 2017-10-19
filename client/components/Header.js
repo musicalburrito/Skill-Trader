@@ -23,6 +23,7 @@ class Header extends React.Component {
                 <Nav pullRight>
                     <NavItem eventKey={1}><Link to="/login">Login</Link></NavItem>
                     <NavItem eventKey={2}><Link to="/listings">Listings</Link></NavItem>
+                    <NavItem eventKey={3}><Link to="/viewListings">Offers</Link></NavItem>
                     {/*<NavDropdown eventKey={3} title="Dropdown" id="basic-nav-dropdown">*/}
                         {/*<MenuItem eventKey={3.1}>Action</MenuItem>*/}
                         {/*<MenuItem eventKey={3.2}>Another action</MenuItem>*/}

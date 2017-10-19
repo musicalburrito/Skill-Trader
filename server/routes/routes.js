@@ -32,6 +32,16 @@ router.route('/un')
     });
 
 router.route('/listings')
+    .get(function(req, res){
+        Lsting.find(function(err, listings){
+            if (err)
+                res.send(err);
+            res.json(listings);
+            // res.send(listings);
+            // console.log(listings);
+        });
+        console.log("hello");
+    })
     .post(function(req, res){
         var aListing = new Lsting();
         aListing.title = req.body.title;
